@@ -6,19 +6,25 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
 .visuallyhidden:not(:focus):not(:active) {position: absolute;width: 1px;height: 1px;margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(0 0 0 0);overflow: hidden;}
 
-.wrapper {
-  width: 40%;
-  margin: 2% auto;
-}
-
 h1, h4{
   text-align: center;
 }
 
+button:hover {
+  background-color: #45a049;
+}
 
-input, select {
+.wrapper {
+  width: 50%;
+  margin: 2% auto;
+  background-color: #f2f2f2;
+  padding: 20px;
+    border-radius: 5px;
+}
+
+input, select, output {
   width: 100%;
-  padding: 12px 20px;
+  padding: 1.5% 2%;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
@@ -36,22 +42,22 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #45a049;
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .wrapper {
+    width: 80%;
+    margin: 2% auto;
+    padding: 20px;
+  }
+
+  input, select, output {
+    padding: 1.5% 2%;
+    margin: 8px 0;
+  }
+
+  button {
+    padding: 14px 20px;
+  }
 }
 
-output {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
 
-div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
