@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Manning's Equation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles/style.css"/>
 </head>
@@ -10,25 +10,28 @@
 
   <main class="wrapper">
     <h1>Capacity & Velocity of Circular Concrete Pipes by Manning's Equation</h1>
-    <div class="input"> <!-- Diameter Selection from JS Array  -->
-      <label for="diameters">Select the Nominal Pipe Size (mm)</label>
-      <select id="diameters"></select> 
-    </div>
-    <div class="input">
-      <label for="slope">What is your slope? (m/m)</label> <!-- Slope Input  -->
-      <input type="number" id="slope" name="slope" required
+    <h4>Roughness coefficient (n) = 0.013</h4>
+    <h4>Capacity and velocity calculated using actual pipe size</h4> 
+    <section> <!-- Diameter Selection from JS Array  -->
+      <label for="diameters">Select the Nominal Pipe Size (mm).</label>
+        <select id="diameters"></select> 
+    </section>
+    <section>
+      <label for="slope">What is your slope? (%)</label> <!-- Slope Input  -->
+        <input type="number" id="slope" name="slope" required
              minlength="1" maxlength="5" step='0.01' min='0.01' max='12.5' value="1">  
       <button id="btn">Select</button>
-    </div>
+    </section>
     <div class="output"> <!-- Velocity Output Section  -->
-      <label for="capacity">Velocity (m/sec)</label>
-      <output type="text" id="velocity" value=""></output>
-    </div>
-    <div class="output"> <!-- Capacity Output Section  -->
-      <label for="capacity">Capacity (m&sup3;/s)</label>
-      <output id="capacity" value=""></output>
-      <label for="capacity">Capacity (L/sec)</label>
-      <output id="capacityL-S" value=""></output>
+      <label for="capacity">Velocity (m/s)</label>
+        <output type="text" id="velocity" value=""></output>
+     <section>
+      <label class = 'capacity' for="capacity">Capacity (m&sup3;/s)</label>
+        <output id="capacity" class = 'capacity' value=""></output>
+      <label for="capacity">Capacity (L/s)</label>
+        <output id="capacityL-S" value=""></output>
+     </section>
+
     </div>
     <div>
       <h4>Always Check Your Work!</h4>
