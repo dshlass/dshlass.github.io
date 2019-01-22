@@ -928,8 +928,8 @@ nav ul li:active a:before {
   background: -webkit-gradient(linear, left top, right top, from(#ff4a57), color-stop(10%, #ff4a57), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(90%, rgba(0, 0, 0, 0)), color-stop(90%, #ff4a57), to(#ff4a57));
   background: linear-gradient(to right, #ff4a57 0%, #ff4a57 10%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, #ff4a57 90%, #ff4a57 100%);
   top: 50%;
-  left: 15%;
-  right: 15%;
+  left: -10%;
+  right: -10%;
 }
 
 input[name='resume'] {
@@ -1148,6 +1148,10 @@ footer {
   .resume-wrapper li {
     margin: 5% 0;
   }
+  .resume-wrapper .before-after::before {
+    left: 5%;
+    right: 5%;
+  }
   footer {
     padding-top: 15%;
   }
@@ -1299,7 +1303,6 @@ footer {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    width: 60%;
     margin: 0 auto;
   }
   .resume-wrapper .label-wrapper::after {
@@ -1328,12 +1331,6 @@ footer {
     width: 40%;
   }
   .resume-wrapper .before-after::before {
-    content: '';
-    height: 5px;
-    position: absolute;
-    background: -webkit-gradient(linear, left top, right top, from(#ff4a57), color-stop(10%, #ff4a57), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(90%, rgba(0, 0, 0, 0)), color-stop(90%, #ff4a57), to(#ff4a57));
-    background: linear-gradient(to right, #ff4a57 0%, #ff4a57 10%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, #ff4a57 90%, #ff4a57 100%);
-    top: 50%;
     left: -20%;
     right: -20%;
   }
@@ -1423,6 +1420,13 @@ footer {
   .resume-wrapper li {
     width: 30%;
     margin: 2% 0;
+  }
+  .resume-wrapper .label-wrapper {
+    width: 60%;
+  }
+  .resume-wrapper .before-after::before {
+    left: -15%;
+    right: -15%;
   }
   footer {
     padding-top: 5%;
