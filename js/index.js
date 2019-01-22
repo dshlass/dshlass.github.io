@@ -4,10 +4,6 @@ $(function() {
     $('a').smoothScroll({
         offset: -98
     });
-    
-    $( "#education" ).click(function() {
-        $( ".education" ).scroll();
-      });
 
     //For the drop-down menu
     $('a').click(function(){
