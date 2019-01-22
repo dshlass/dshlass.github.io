@@ -2,42 +2,361 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Manning's Equation</title>
+  <title>Dale Shlass</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles/style.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Rubik:400,500,700,900|Rufina:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/_animations.css">
+  <link rel="stylesheet" href="./styles/style.css"/>
+
 </head>
-<body>
-
-  <main class="wrapper">
-    <h1>Capacity & Velocity of Circular Concrete Pipes by Manning's Equation</h1>
-    <h4>Roughness coefficient (n) = 0.013</h4>
-    <h4>Capacity and velocity calculated using actual pipe size</h4> 
-    <section> <!-- Diameter Selection from JS Array  -->
-      <label for="diameters">Select the Nominal Pipe Size (mm).</label>
-        <select id="diameters"></select> 
-    </section>
-    <section>
-      <label for="slope">What is your slope? (%)</label> <!-- Slope Input  -->
-        <input type="number" id="slope" name="slope" required
-             minlength="1" maxlength="5" step='0.01' min='0.01' max='12.5' value="1">  
-      <button id="btn">Select</button>
-    </section>
-    <div class="output"> <!-- Velocity Output Section  -->
-      <label for="capacity">Velocity (m/s)</label>
-        <output type="text" id="velocity" value=""></output>
-     <section>
-      <label class = 'capacity' for="capacity">Capacity (m&sup3;/s)</label>
-        <output id="capacity" class = 'capacity' value=""></output>
-      <label for="capacity">Capacity (L/s)</label>
-        <output id="capacityL-S" value=""></output>
-     </section>
-
+<body id="top">
+  <div id="navWrapper" class="nav-wrapper"> <!-- Wrapper to size the navigation bar -->
+    <div id="sticky-wrapper"class="sticky-wrapper"> <!-- the sticky navigation bar -->
+      <div class="header-logo">
+        <a href="#top"><img src="./assets/header-logo.png" alt="The letter D with a paper airplane on top."></a>
+      </div>
+      <input id="toggle" name="toggle" type="checkbox"> <!-- Hidden checkbox for the dropdown navigation -->
+      <nav id="menuClose"class="tab-content">
+        <ul id ='test' class="nav"> <!-- Consider adding more content here -->
+          <li>
+            <a href="#top">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#wedo">Services</a>
+          </li>
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="#qualifications">Resume</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <label for="toggle">&#9776;</label> <!-- Hamburger menu button! -->
     </div>
-    <div>
-      <h4>Always Check Your Work!</h4>
+  </div> <!-- End of navigation wrapper  -->
+  <header>
+    <div class="wrapper"> <!-- Wrapper for all content -->
+      <div class="star-wars slideLeft"> <!-- Thats me! -->
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="300px" height="300px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+        <title>Rebel Alliance Logo Star Wars</title>
+        <desc>Emblem of the Star Wars Rebel Alliance. Half circle with two horns to almost form the rest of the circile. Three pillars rise from the center.</desc>    
+
+          <g>
+            <path d="M7.42,145.986C9.185,99.193,32.899,56.035,76.25,27.516c0.128,0.048,1.251-0.361,0.738,0.61
+                c-3.434,3.184-65.172,76.114-8.344,133.68c0,0,29.858,28.704,53.011,1.468c0,0,22.847-29.577-0.289-74.413
+                c0,0-5.856-14.64-26.955-23.721l16.992-18.748c0,0,14.359,6.161,25.478,22.871c0,0,0.593-17.593-12.884-36.34l26.345-29.89
+                l26.08,29.609c0,0-11.993,16.991-12.876,36.902c0,0,8.191-13.477,25.776-23.151l16.686,18.748c0,0-16.045,5.287-26.794,23.529
+                c-9.242,16.902-16.357,53.05,0.416,75.223c0,0,18.772,26.618,51.792-1.571c0,0,60.712-54.399-6.226-133.048
+                c0,0-3.658-3.233,0.449-1.476c29.586,21.54,65.012,49.946,68.67,120.837c-1.444,85.966-59.012,147.334-143.074,147.334
+                C68.934,295.968,4.95,227.283,7.42,145.986"/>
+          </g>
+        </svg>
+      </div>
+      <div class="heading-wrapper"> <!-- Wrapper for the heading elements -->
+        <div class="background floating">
+          <p class="floating-developer">Developer</p>  <!-- Floating in the background -->
+        </div>
+        <div class="flex-header-content">
+          <div class="header-flex-left">
+            <p class="slideUp">Story Telling, Branding And Digital Experience</p> <!-- Change the wording lol -->
+            <h1 class="slideUp">Dale Shlass</h1>
+            <a class="whatIDo slideRight" href="#wedo">What I Do</a>            
+          </div>
+          <div class="header-flex-right">
+            <ul class="header-social">
+              <li>
+               <a href="https://github.com/dshlass" target="_blank"><i class="fab fa-github"></i></a>
+              </li>
+              <li>
+                  <a href="https://www.linkedin.com/in/dale-shlass-33750a3b" target="_blank"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/dshlass/" target="_blank"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-  </main>
+  </header >
+    <main id="whatIDo">
+      <section id="about">
+        <div class="wrapper-white">
+          <div class="about-flex-wrapper">
+            <div class="about-flex-left">
+              <img src="./assets/mymug.jpg" alt="A photo of me.">
+            </div>
+            <div class="about-flex-right">
+                <h3>Professional Profile</h3>
+                <h2>All About Me</h2>
+                <div class="contact-flex">
+                  <ul>
+                    <li>
+                      <div class="contact-logo">
+                        <img src="./assets/profile.png" alt="Logo of a person.">
+                      </div>
+                      <div>
+                          <h4>Full Name</h4>
+                          <p>Dale Shlass</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="contact-logo">
+                        <img src="./assets/email.png" alt="Logo of an open letter with the at symbol.">
+                      </div>
+                      <div>
+                          <h4>email</h4>
+                          <a href="mailto:dale@shlass.com">dale@shlass.com</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="languages-wrapper">
+                  <h4>Languages:</h4>
+                    <ul class="languages">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="298px" height="420px" viewBox="0 0 298 420" version="1.1">
+                              <title>Slice 1</title>
+                              <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+                              <defs/>
+                              <g id="Page 1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                  <g id="Group">
+                                      <path d="M27.383,386.266 L0.313,82.646 L297.763,82.646 L270.665,386.217 L148.856,419.986 L27.383,386.266 Z M27.383,386.266" id="Shape" fill="#E44F26"/>
+                                      <path d="M149.038,394.175 L247.465,366.887 L270.623,107.471 L149.038,107.471 L149.038,394.175 Z M149.038,394.175" id="Shape" fill="#F1662A"/>
+                                      <path d="M149.038,220.08 L99.763,220.08 L96.359,181.948 L149.038,181.948 L149.038,144.709 L148.909,144.709 L55.663,144.709 L56.555,154.7 L65.707,257.316 L149.038,257.316 L149.038,220.08 Z M149.038,220.08" id="Shape" fill="#EBEBEB"/>
+                                      <path d="M149.038,316.788 L148.875,316.834 L107.403,305.635 L104.751,275.937 L84.6,275.937 L67.371,275.937 L72.588,334.404 L148.866,355.58 L149.038,355.532 L149.038,316.788 Z M149.038,316.788" id="Shape" fill="#EBEBEB"/>
+                                      <path d="M27.988,0.135 L46.912,0.135 L46.912,18.831 L64.223,18.831 L64.223,0.135 L83.148,0.135 L83.148,56.753 L64.224,56.753 L64.224,37.795 L46.914,37.795 L46.914,56.753 L27.988,56.753 L27.988,0.135 L27.988,0.135 Z M27.988,0.135" id="Shape" fill="#010101"/>
+                                      <path d="M108.032,18.91 L91.372,18.91 L91.372,0.135 L143.624,0.135 L143.624,18.91 L126.957,18.91 L126.957,56.753 L108.033,56.753 L108.033,18.91 L108.032,18.91 L108.032,18.91 Z M108.032,18.91" id="Shape" fill="#010101"/>
+                                      <path d="M151.917,0.135 L171.65,0.135 L183.787,20.029 L195.914,0.135 L215.653,0.135 L215.653,56.753 L196.807,56.753 L196.807,28.69 L183.786,48.82 L183.461,48.82 L170.433,28.69 L170.433,56.753 L151.916,56.753 L151.916,0.135 L151.917,0.135 Z M151.917,0.135" id="Shape" fill="#010101"/>
+                                      <path d="M225.071,0.135 L244,0.135 L244,38.038 L270.612,38.038 L270.612,56.752 L225.07,56.752 L225.07,0.135 L225.071,0.135 Z M225.071,0.135" id="Shape" fill="#010101"/>
+                                      <path d="M148.909,220.08 L148.909,257.316 L194.763,257.316 L190.441,305.61 L148.909,316.82 L148.909,355.562 L225.249,334.404 L225.808,328.114 L234.559,230.079 L235.467,220.08 L225.433,220.08 L148.909,220.08 Z M148.909,220.08" id="Shape" fill="#FFFFFF"/>
+                                      <path d="M148.909,144.709 L148.909,167.837 L148.909,181.856 L148.909,181.948 L238.736,181.948 L238.856,181.948 L239.603,173.578 L241.299,154.7 L242.19,144.709 L148.909,144.709 Z M148.909,144.709" id="Shape" fill="#FFFFFF"/>
+                                  </g>
+                              </g>
+                          </svg>
+                        </li>
+                      <li>
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="298px" height="420px" viewBox="0 0 298 420" version="1.1">
+                            <title>Slice 1</title>
+                            <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+                            <defs/>
+                            <g id="Page 1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="Layer_1">
+                                    <path d="M233.164,15.681 L208.476,15.681 L234.15,43.54 L234.15,56.801 L181.268,56.801 L181.268,41.275 L206.937,41.275 L181.268,13.415 L181.268,0.135 L233.164,0.135 L233.164,15.681 L233.164,15.681 Z M170.786,15.681 L146.098,15.681 L171.771,43.54 L171.771,56.801 L118.889,56.801 L118.889,41.275 L144.561,41.275 L118.889,13.415 L118.889,0.135 L170.786,0.135 L170.786,15.681 L170.786,15.681 Z M109.018,16.312 L82.378,16.312 L82.378,40.625 L109.018,40.625 L109.018,56.801 L63.444,56.801 L63.444,0.135 L109.018,0.135 L109.018,16.312 L109.018,16.312 Z M109.018,16.312" id="Shape" fill="#131313"/>
+                                    <path d="M27.142,386.29 L0.071,82.67 L297.521,82.67 L270.425,386.241 L148.614,420.011 L27.142,386.29 Z M27.142,386.29" id="Shape" fill="#1572B6"/>
+                                    <path d="M148.798,394.199 L247.225,366.911 L270.382,107.496 L148.798,107.496 L148.798,394.199 Z M148.798,394.199" id="Shape" fill="#33A9DC"/>
+                                    <g id="Group" transform="translate(55.000000, 142.000000)">
+                                        <path d="M93.797,75.496 L143.072,75.496 L146.475,37.364 L93.797,37.364 L93.797,0.125 L93.926,0.125 L187.172,0.125 L186.279,10.116 L177.127,112.732 L93.797,112.732 L93.797,75.496 Z M93.797,75.496" id="Shape" fill="#FFFFFF"/>
+                                        <path d="M94.02,172.204 L93.857,172.25 L52.385,161.051 L49.733,131.353 L29.582,131.353 L12.354,131.353 L17.57,189.82 L93.848,210.996 L94.02,210.948 L94.02,172.204 Z M94.02,172.204" id="Shape" fill="#EBEBEB"/>
+                                        <path d="M139.907,111.156 L135.423,161.026 L93.891,172.236 L93.891,210.978 L170.23,189.82 L170.79,183.53 L177.268,111.156 L139.907,111.156 Z M139.907,111.156" id="Shape" fill="#FFFFFF"/>
+                                        <path d="M93.926,0.125 L93.926,23.253 L93.926,37.272 L93.926,37.364 L4.098,37.364 L3.979,37.364 L3.232,28.994 L1.535,10.116 L0.645,0.125 L93.926,0.125 Z M93.926,0.125" id="Shape" fill="#EBEBEB"/>
+                                        <path d="M93.797,75.5 L93.797,98.629 L93.797,112.646 L93.797,112.738 L52.969,112.738 L52.85,112.738 L52.104,104.369 L50.406,85.491 L49.516,75.5 L93.797,75.5 Z M93.797,75.5" id="Shape" fill="#EBEBEB"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                      </li>
+                      <li>
+                          <svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                            <g>
+                                <path d="M0,0 L256,0 L256,256 L0,256 L0,0 Z" fill="#F7DF1E"></path>
+                                <path d="M67.311746,213.932292 L86.902654,202.076241 C90.6821079,208.777346 94.1202286,214.447137 102.367086,214.447137 C110.272203,214.447137 115.256076,211.354819 115.256076,199.326883 L115.256076,117.528787 L139.313575,117.528787 L139.313575,199.666997 C139.313575,224.58433 124.707759,235.925943 103.3984,235.925943 C84.1532952,235.925943 72.9819429,225.958603 67.3113397,213.93026" fill="#000000"></path>
+                                <path d="M152.380952,211.354413 L171.969422,200.0128 C177.125994,208.433981 183.827911,214.619835 195.684368,214.619835 C205.652521,214.619835 212.009041,209.635962 212.009041,202.762159 C212.009041,194.513676 205.479416,191.592025 194.481168,186.78207 L188.468419,184.202565 C171.111213,176.81473 159.597308,167.53534 159.597308,147.944838 C159.597308,129.901308 173.344508,116.153295 194.825752,116.153295 C210.119924,116.153295 221.117765,121.48094 229.021663,135.400432 L210.29059,147.428775 C206.166146,140.040127 201.699556,137.119289 194.826159,137.119289 C187.78047,137.119289 183.312254,141.587098 183.312254,147.428775 C183.312254,154.646349 187.78047,157.568406 198.089956,162.036622 L204.103924,164.614095 C224.553448,173.378641 236.067352,182.313448 236.067352,202.418387 C236.067352,224.071924 219.055137,235.927975 196.200432,235.927975 C173.860978,235.927975 159.425829,225.274311 152.381359,211.354413" fill="#000000"></path>
+                            </g>
+                        </svg>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="wedo">
+        <div class="wrapper-light">
+        <div class="what-we-do-wrapper">
+            <div class="what-we-do">
+                <h3>Services</h3>
+                <h2>What I Do</h2>
+            </div>
+            <div class="service-container">
+              <ul>
+                <li>
+                  <div class="service-icon">
+                    <img src="./assets/graphic-design.png" alt="">
+                  </div>
+                  <h4>Graphic Design</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                  <a href="">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <div class="service-icon">
+                    <img src="./assets/web-design.png" alt="">
+                  </div>
+                  <h4>Web Design</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                  <a href="">
+                      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <div class="service-icon">
+                      <img src="./assets/seo-marketing.png" alt="">
+                    </div>
+                    <h4>SEO Marketing</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    <a href="">
+                      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                  </li>
+
+                <li>
+                  <div class="service-icon">
+                    <img src="./assets/graphic-design.png" alt="">
+                  </div>
+                  <h4>Consulting</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                  <a href="">
+                      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <div class="service-icon">
+                      <img src="./assets/branding.png" alt="">
+                    </div>
+                    <h4>Branding Design</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                    <a href="">
+                      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                <li>
+                  <div class="service-icon">
+                    <img src="./assets/graphic-design.png" alt="">
+                  </div>
+                  <h4>24/7 Support</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                  <a href="">
+                      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      </section>
+
+      <section id="qualifications" class="wrapper-white">
+        	<div class="resume-wrapper">
+              <h3>Services</h3>
+              <div class="label-wrapper">
+                  <label for="resume" id="education" class="before-after">Education</label>
+                  <label for="resume" id="experience">Experience</label>
+              </div>
+            
+            
+            <input type="checkbox" name="resume" id="resume" checked>
+            
+            <ul>
+              <li class="education">
+                <div class="resume-logo">
+                  <img src="./assets/resume1.png" alt="">
+                </div>
+                <h4>Computer Science</h4>
+                <h5>Stanford University | 1998 - 2004</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+              </li>
+              <li class="education no-animation">
+                <div class="resume-logo">
+                  <img src="./assets/resume2.png" alt="">
+                </div>
+                <h4>Computer Science</h4>
+                <h5>Stanford University | 1998 - 2004</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+              </li>
+              <li class="education">
+                <div class="resume-logo">
+                  <img src="./assets/resume3.png" alt="">
+                </div>
+                <h4>Computer Science</h4>
+                <h5>Stanford University | 1998 - 2004</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+              </li>
+              <li class="experience" >
+                <div class="resume-logo">
+                  <img src="./assets/resume1.png" alt="">
+                </div>
+                <h4>Frontend Developer</h4>
+                <h5>BDlebs | 2008 - 2012</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+              </li>
+              <li class="experience no-animation">
+                <div class="resume-logo">
+                  <img src="./assets/resume2.png" alt="">
+                </div>
+                <h4>Frontend Developer</h4>
+                <h5>BDlebs | 2008 - 2012</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+              </li>
+              <li class="experience">
+                <div class="resume-logo">
+                  <img src="./assets/resume3.png" alt="">
+                </div>
+                <h4>Frontend Developer</h4>
+                <h5>BDlebs | 2008 - 2012</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+              </li>
+            </ul>
+            </div>
+      </section>
+
+
+    </main>
+    <footer id="contact">
+      <div class="blue-wrapper">
+        <div class="footer-logo">
+          <a href="#top"><img src="./assets/footer-logo.png" alt="The letter D with a paper airplane on top."></a>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolor delectus? Eius modi mollitia, tempora earum facere, quaerat, illum minima quia soluta quibusdam iusto atque at hic nisi quasi. Ut mollitia reiciendis, quas repellendus iure magnam perferendis debitis esse voluptatem deleniti possimus, soluta tenetur veniam quisquam perspiciatis eligendi ipsum. Maiores?</p>
+        <div class="">
+            <ul class="footer-social">
+              <li>
+                <a href="https://github.com/dshlass" target="_blank"><i class="fab fa-github"></i></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/dale-shlass-33750a3b" target="_blank"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/dshlass/" target="_blank"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+      </div>
+      <div class="copyright-wrapper">
+        <p>&#169; Dale Shlass 2019, All Rights Reserved.</p>
+      </div>
+    </footer>
+    
+    <div id="scrollToTop" class="back-to-top">
+      <a href="#top"><i class="fas fa-angle-up"></i></a>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
+<script src="./js/index.js"></script>
+
 </body>
-<script src="./js/manning.js"></script>
+
+
 
 </html>
