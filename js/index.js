@@ -15,14 +15,14 @@ $(function() {
     //For the Resume page
     $('#experience').click(function(){
       $('#resume').prop('checked', true);
-      $('#experience').addClass('before-after');
-      $('#education').removeClass('before-after');
+      $('#experience').addClass('no-animation');
+      $('#education').removeClass('no-animation');
     });
     
     $('#education').click(function(){
       $('#resume').prop('checked', false);
-      $('#experience').removeClass('before-after');
-      $('#education').addClass('before-after');
+      $('#education').addClass('no-animation');
+      $('#experience').removeClass('no-animation');
     });
 });
 

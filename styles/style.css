@@ -828,8 +828,8 @@ nav ul li:active a:before {
   font-family: "Rufina", serif;
   font-size: 4.0rem;
   font-weight: 700;
-  padding: 0;
-  margin: 5% 0;
+  padding: 5% 0;
+  margin: 5% auto;
   position: relative;
 }
 
@@ -854,6 +854,7 @@ nav ul li:active a:before {
 
 .resume-wrapper label {
   cursor: pointer;
+  width: 40%;
 }
 
 .resume-wrapper ul {
@@ -921,15 +922,64 @@ nav ul li:active a:before {
   bottom: -2px;
 }
 
-.resume-wrapper .before-after::before {
+label[for="resume"] {
+  border-top: 2px solid #f4f7fb;
+  border-bottom: 2px solid #f4f7fb;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.left-right:before,
+.left-right:after {
   content: '';
-  height: 5px;
+  height: 2px;
   position: absolute;
-  background: -webkit-gradient(linear, left top, right top, from(#ff4a57), color-stop(10%, #ff4a57), color-stop(10%, rgba(0, 0, 0, 0)), color-stop(90%, rgba(0, 0, 0, 0)), color-stop(90%, #ff4a57), to(#ff4a57));
-  background: linear-gradient(to right, #ff4a57 0%, #ff4a57 10%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, #ff4a57 90%, #ff4a57 100%);
-  top: 50%;
-  left: -10%;
-  right: -10%;
+  background: #ff4a57;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.left-right:before {
+  top: -2px;
+  right: 0;
+  left: 70%;
+}
+
+.left-right:after {
+  bottom: -2px;
+  right: 70%;
+  left: 0;
+}
+
+.right-left:before,
+.right-left:after {
+  content: '';
+  height: 2px;
+  position: absolute;
+  background: #ff4a57;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.right-left:before {
+  top: -2px;
+  right: 70%;
+  left: 0;
+}
+
+.right-left:after {
+  bottom: -2px;
+  right: 0;
+  left: 70%;
+}
+
+.right-left:hover::before,
+.right-left:hover::after,
+.left-right:hover::before,
+.left-right:hover::after {
+  left: 0;
+  right: 0;
 }
 
 input[name='resume'] {
@@ -1132,6 +1182,9 @@ footer {
   .languages {
     width: 60%;
   }
+  .resume-wrapper label {
+    padding: 3% 0;
+  }
   .resume-wrapper h3 {
     padding: 10% 0 3% 0;
   }
@@ -1147,10 +1200,6 @@ footer {
   }
   .resume-wrapper li {
     margin: 5% 0;
-  }
-  .resume-wrapper .before-after::before {
-    left: 5%;
-    right: 5%;
   }
   footer {
     padding-top: 15%;
@@ -1292,7 +1341,7 @@ footer {
     margin-bottom: 2%;
   }
   .resume-wrapper label {
-    margin: 2% 0;
+    margin: 2% auto;
     position: relative;
   }
   .resume-wrapper .label-wrapper {
@@ -1329,10 +1378,6 @@ footer {
   }
   .resume-wrapper li {
     width: 40%;
-  }
-  .resume-wrapper .before-after::before {
-    left: -20%;
-    right: -20%;
   }
   footer {
     padding-top: 8%;
@@ -1423,10 +1468,6 @@ footer {
   }
   .resume-wrapper .label-wrapper {
     width: 60%;
-  }
-  .resume-wrapper .before-after::before {
-    left: -15%;
-    right: -15%;
   }
   footer {
     padding-top: 5%;
