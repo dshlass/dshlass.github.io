@@ -605,6 +605,10 @@ nav ul li:active a:before  {
     cursor: pointer;
   }
 
+  a {
+    color: black;
+  }
+
   ul {
     list-style: none;
     padding: 0;

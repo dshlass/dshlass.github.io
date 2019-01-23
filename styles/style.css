@@ -856,6 +856,10 @@ nav ul li:active a:before {
   cursor: pointer;
 }
 
+.resume-wrapper a {
+  color: black;
+}
+
 .resume-wrapper ul {
   list-style: none;
   padding: 0;
