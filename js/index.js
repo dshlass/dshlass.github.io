@@ -2,7 +2,8 @@ $(function() {
     
     //smoothScroll functionality
     $('a').smoothScroll({
-        offset: -98
+        offset: -98,
+        speed: 1000
     });
 
     //For the drop-down menu
