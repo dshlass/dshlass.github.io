@@ -854,7 +854,6 @@ nav ul li:active a:before {
 
 .resume-wrapper label {
   cursor: pointer;
-  width: 40%;
 }
 
 .resume-wrapper ul {
@@ -1343,6 +1342,7 @@ footer {
   .resume-wrapper label {
     margin: 2% auto;
     position: relative;
+    width: 40%;
   }
   .resume-wrapper .label-wrapper {
     position: relative;
