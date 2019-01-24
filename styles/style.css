@@ -572,6 +572,12 @@ nav ul li:active a:before {
   margin-right: 5%;
 }
 
+.about-flex-left img {
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 10px 34px -10px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 34px -10px rgba(0, 0, 0, 0.75);
+}
+
 .about-flex-right {
   width: 100%;
 }

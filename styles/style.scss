@@ -340,6 +340,10 @@ nav ul li:active a:before  {
   width: 100%;
   margin-right: 5%;
 
+  img {
+    border-radius: 50%;
+    box-shadow: 10px 10px 34px -10px rgba(0,0,0,0.75);
+  }
 }
 
 .about-flex-right { //Start of about-flex-right code block
