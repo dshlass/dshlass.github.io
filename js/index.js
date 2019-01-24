@@ -15,13 +15,13 @@ $(function() {
 
     //For the Resume page
     $('#experience').click(function(){
-      $('#resume').prop('checked', true);
+      $('#resume').prop('checked', false);
       $('#experience').addClass('no-animation');
       $('#education').removeClass('no-animation');
     });
     
     $('#education').click(function(){
-      $('#resume').prop('checked', false);
+      $('#resume').prop('checked', true);
       $('#education').addClass('no-animation');
       $('#experience').removeClass('no-animation');
     });
