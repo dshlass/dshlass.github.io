@@ -37,10 +37,6 @@ function getYPosition() {
   return window.scrollY;
 }
 
-function isChecked() {
-  return checked;
-}
-
 function navSticky() {
   if (getYPosition() >= 1 ) {
     navWrapper.className = "nav-wrapper nav-fixed";
