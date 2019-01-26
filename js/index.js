@@ -12,6 +12,7 @@ $(function() {
         $('#toggle').prop('checked', false);
       }
     });
+  });
 
     //For the Resume page
     $('#experience').click(function(){
@@ -25,7 +26,18 @@ $(function() {
       $('#education').addClass('no-animation');
       $('#experience').removeClass('no-animation');
     });
-});
+
+    $('input, textarea').focus(function(){
+      $(this).parent().addClass( "focus");
+      $(this).parent().css("color", "#ff4a57")
+  });		
+
+    $('input, textarea').blur(function(){
+      $(this).parent().removeClass( "focus" );
+      $(this).parent().css("color", "#929cad")
+    });
+
+
 
 //Section to control the navigation menu
 navWrapper = document.getElementById("navWrapper");

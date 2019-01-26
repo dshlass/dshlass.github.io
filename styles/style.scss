@@ -15,8 +15,9 @@
 /*      Section 3: What I Do                                               */
 /*      Section 4: Portfolio                                               */
 /*      Section 5: Resume                                                  */
-/*      Section 6: Footer                                                  */
-/*      Section 7: Media Queries                                           */
+/*      Section 6: Contact                                                 */
+/*      Section 7: Footer                                                  */
+/*      Section 8: Media Queries                                           */
 /*                                                                         */
 /***************************************************************************/
 
@@ -71,6 +72,14 @@ h1 {
   font-size: 50px;
   font-family: $rufinaFont;
   visibility: hidden; //For the animation
+}
+
+.color-red {
+  color: #D11F26;
+}
+
+.color-blue {
+  color: #1C5793;
 }
  
 .header-flex-left p {     
@@ -761,9 +770,132 @@ input[name='resume'] {
     flex-direction: column;
   }
 
+/************************************ Section 6: Contact ********************************************/
+
+.center-wrapper {
+  margin: 0;
+  background: url(../assets/contact-bg.png), #f3f5ff;
+  padding: 5%;
+}
+
+.contact-wrapper {
+  margin: 0 auto;
+  text-align: center;
+
+  h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-family: $rubikFont;
+    color: $salmon;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    font-size: 3.8rem;
+    font-family: $rufinaFont;
+    line-height: 1;
+    letter-spacing: 2px;
+    position: relative;
+  }
+
+  h2::after {
+    position: absolute;
+    content: "";
+    height: 5px;
+    background: linear-gradient(to right, #ced6ff 0%, #ced6ff 60%, rgba(206, 214, 255, 0) 60%, rgba(206, 214, 255, 0) 80%, #ced6ff 80%, #ced6ff 100%);
+    bottom: -20px;
+    left: 40%;
+    right: 40%;
+  }
+}
+.contact-flex {
+  display: flex;
+  flex-direction: column;
+  font-family: $rubikFont;
+  font-size: 2rem;
+
+  input {
+    text-transform: uppercase;
+    margin: 10% 0;
+    border: none;
+    background: none;
+    outline: 0;
+    width: 90%;
+  }
+
+  textarea {
+    padding: 5% 1%;
+    border: none;
+    outline: 0;
+    width: 90%;
+    overflow: auto;
+    resize: vertical;
+    min-height:100px;
+    background: none;
+  }
+
+  .input-wrapper{
+    border: 3px solid #929cad;
+    margin: 5% 0;
+    position: relative;
+    color: #929cad;
+  }
+
+  .input-wrapper::after {
+    position: absolute;
+    top: -12px;
+    left:24px;
+    background: #f3f5ff;
+  }
+
+  .input-wrapper.message {
+    width: 100%;
+  }
+
+  .name::after {
+    content:"NAME";
+  }
+
+  .email::after {
+    content:"EMAIL";
+  }
+
+  .tel::after {
+    content:"PHONE NUMBER";
+  }
+
+  .message::after {
+    content:"MESSAGE";
+  }
+
+  .focus {
+    border: 3px dashed $salmon;
+    transition: all 0.3s;
+  }
+
+ }
+ 
+ form button {
+  margin: 5%;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 21px 53px;
+  text-align: center;
+  text-transform: uppercase;
+  background: $salmon;
+  border-radius: 30px;
+  letter-spacing: 2px;
+}
 
 
-/************************************ Section 6: Footer ********************************************/
+
+/************************************ Section 7: Footer ********************************************/
 
 footer {
   padding-top: 30%;
@@ -831,7 +963,7 @@ footer {
 }
 
 
-/************************************ Section 7: Media Queries ********************************************/
+/************************************ Section 8: Media Queries ********************************************/
 
 // Landscape phones and down
 @media (min-width: 364px) {
@@ -854,7 +986,7 @@ footer {
     font-size: 10rem;
   }
 
-  //Section 6: Footer
+  //Section 7: Footer
   footer {
     padding-top: 20%;
   }
@@ -991,7 +1123,16 @@ footer {
   }
 }
 
-  //Section 6: Footer
+      //Section 6: Contact
+      .contact-wrapper {
+        width: 60%;
+    
+        .input-wrapper {
+          margin: 3% 0;
+        }
+    }
+
+  //Section 7: Footer
   footer {
     padding-top: 15%;
   }
@@ -1187,8 +1328,31 @@ footer {
       width: 40%;
     }
   }
+  //Section 6: Contact
+  .contact-wrapper {
+    width: 100%;
 
-  //Section 6: Footer
+    .input-wrapper {
+      width: 33%;
+      margin: 3% 0;
+    }
+
+    textarea {
+      padding: 2% 0;
+    }
+  }
+
+.contact-flex {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form button {
+  margin: 2%;
+}
+
+  //Section 7: Footer
   footer {
     padding-top: 8%;
   }
@@ -1313,7 +1477,22 @@ footer {
         }
     }
 
-  //Section 6: Footer
+  //Section 6: Contact
+  .contact-wrapper {
+    width: 90%;
+
+    h2:after {
+      left: 45%;
+      right: 45%;
+    }
+
+    .input-wrapper {
+      width: 33%;
+      margin: 3% 0;
+    }
+}
+
+  //Section 7: Footer
   footer {
     padding-top: 5%;
   }

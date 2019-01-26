@@ -11,8 +11,9 @@
 /*      Section 3: What I Do                                               */
 /*      Section 4: Portfolio                                               */
 /*      Section 5: Resume                                                  */
-/*      Section 6: Footer                                                  */
-/*      Section 7: Media Queries                                           */
+/*      Section 6: Contact                                                 */
+/*      Section 7: Footer                                                  */
+/*      Section 8: Media Queries                                           */
 /*                                                                         */
 /***************************************************************************/
 /*********************************** Setup! *********************************************/
@@ -282,6 +283,14 @@ h1 {
   font-size: 50px;
   font-family: "Rufina", serif;
   visibility: hidden;
+}
+
+.color-red {
+  color: #D11F26;
+}
+
+.color-blue {
+  color: #1C5793;
 }
 
 .header-flex-left p {
@@ -1026,7 +1035,136 @@ input[name='resume']:checked + ul li.experience {
           flex-direction: column;
 }
 
-/************************************ Section 6: Footer ********************************************/
+/************************************ Section 6: Contact ********************************************/
+.center-wrapper {
+  margin: 0;
+  background: url(../assets/contact-bg.png), #f3f5ff;
+  padding: 5%;
+}
+
+.contact-wrapper {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-wrapper h3 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-family: "Rubik", serif;
+  color: #ff4a57;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.contact-wrapper h2 {
+  font-size: 3.8rem;
+  font-family: "Rufina", serif;
+  line-height: 1;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.contact-wrapper h2::after {
+  position: absolute;
+  content: "";
+  height: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#ced6ff), color-stop(60%, #ced6ff), color-stop(60%, rgba(206, 214, 255, 0)), color-stop(80%, rgba(206, 214, 255, 0)), color-stop(80%, #ced6ff), to(#ced6ff));
+  background: linear-gradient(to right, #ced6ff 0%, #ced6ff 60%, rgba(206, 214, 255, 0) 60%, rgba(206, 214, 255, 0) 80%, #ced6ff 80%, #ced6ff 100%);
+  bottom: -20px;
+  left: 40%;
+  right: 40%;
+}
+
+.contact-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Rubik", serif;
+  font-size: 2rem;
+}
+
+.contact-flex input {
+  text-transform: uppercase;
+  margin: 10% 0;
+  border: none;
+  background: none;
+  outline: 0;
+  width: 90%;
+}
+
+.contact-flex textarea {
+  padding: 5% 1%;
+  border: none;
+  outline: 0;
+  width: 90%;
+  overflow: auto;
+  resize: vertical;
+  min-height: 100px;
+  background: none;
+}
+
+.contact-flex .input-wrapper {
+  border: 3px solid #929cad;
+  margin: 5% 0;
+  position: relative;
+  color: #929cad;
+}
+
+.contact-flex .input-wrapper::after {
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  background: #f3f5ff;
+}
+
+.contact-flex .input-wrapper.message {
+  width: 100%;
+}
+
+.contact-flex .name::after {
+  content: "NAME";
+}
+
+.contact-flex .email::after {
+  content: "EMAIL";
+}
+
+.contact-flex .tel::after {
+  content: "PHONE NUMBER";
+}
+
+.contact-flex .message::after {
+  content: "MESSAGE";
+}
+
+.contact-flex .focus {
+  border: 3px dashed #ff4a57;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+form button {
+  margin: 5%;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 21px 53px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #ff4a57;
+  border-radius: 30px;
+  letter-spacing: 2px;
+}
+
+/************************************ Section 7: Footer ********************************************/
 footer {
   padding-top: 30%;
   background: #152136;
@@ -1092,7 +1230,7 @@ footer {
   padding: 7%;
 }
 
-/************************************ Section 7: Media Queries ********************************************/
+/************************************ Section 8: Media Queries ********************************************/
 @media (min-width: 364px) {
   .header-social {
     width: 40%;
@@ -1209,6 +1347,12 @@ footer {
   }
   .resume-wrapper li {
     margin: 5% 0;
+  }
+  .contact-wrapper {
+    width: 60%;
+  }
+  .contact-wrapper .input-wrapper {
+    margin: 3% 0;
   }
   footer {
     padding-top: 15%;
@@ -1389,6 +1533,30 @@ footer {
   .resume-wrapper li {
     width: 40%;
   }
+  .contact-wrapper {
+    width: 100%;
+  }
+  .contact-wrapper .input-wrapper {
+    width: 33%;
+    margin: 3% 0;
+  }
+  .contact-wrapper textarea {
+    padding: 2% 0;
+  }
+  .contact-flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  form button {
+    margin: 2%;
+  }
   footer {
     padding-top: 8%;
   }
@@ -1478,6 +1646,17 @@ footer {
   }
   .resume-wrapper .label-wrapper {
     width: 60%;
+  }
+  .contact-wrapper {
+    width: 90%;
+  }
+  .contact-wrapper h2:after {
+    left: 45%;
+    right: 45%;
+  }
+  .contact-wrapper .input-wrapper {
+    width: 33%;
+    margin: 3% 0;
   }
   footer {
     padding-top: 5%;
