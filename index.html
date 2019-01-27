@@ -283,10 +283,40 @@
         </div><!--End of what we do wrapper-->
       </div><!--End of light wrapper-->
     </section> <!--End of wedo section-->
-
-    <section></section> <!--This will be my portfolio section-->
-
-    <section id="qualifications" class="wrapper-white">   <!--Consider adding animation for the top/bottom bar like the list-->
+    <section id="portfolio" class="center-wrapper-portfolio"> <!--Start of the portfolio container-->
+      <div class="portfolio-wrapper">
+        <h3>Portfolio</h3>
+        <h2>Previous Work</h2>	
+        <input type="radio" id="all" name="button">
+          <label for="all" class="label-all">All</label>
+        <input type="radio" id="project1" name="button">
+          <label for="project1" class="project1">Project 1</label>
+        <input type="radio" id="project2" name="button">
+          <label for="project2" class="project2">Project 2</label>
+        <input type="radio" id="project3" name="button">
+          <label for="project3" class="project3">Project 3</label>
+        <input type="radio" id="personal-project" name="button">
+          <label for="personal-project" class="personal-project">Other</label>  
+        <ul class="gallery">  <!-- Make the images figure with figcaptions like project2 -->  
+          <li class="project1-item">
+            <img src="./assets/1.jpg" />
+          </li>
+          <li class="project2-item">
+            <img src="./assets/2.jpg" />
+          </li>
+          <li class="project3-item">
+            <img src="./assets/3.jpg" />
+          </li>
+          <li class="project1-item">
+            <img src="./assets/4.jpg" />
+          </li>
+          <li class="personal-item">
+            <img src="./assets/5.jpg" />
+          </li>
+        </ul> 
+      </div>
+    </section> <!--End of the portfolio section-->
+    <section id="qualifications" class="wrapper-light">   <!--Consider adding animation for the top/bottom bar like the list-->
       <div class="resume-wrapper"> <!--Start of resume wrapper-->
         <h3>Qualifications</h3>
         <div class="label-wrapper">
@@ -349,7 +379,7 @@
     <section id="contact" class="center-wrapper">
       <div class="contact-wrapper">
         <h3>Get in touch</h3>
-        <h2>Drop Me a Line</h2>	
+        <h2>Drop Me A Line</h2>	
         <form action="" class="">
           <div class="contact-flex">
             <div class="input-wrapper name">
@@ -394,10 +424,10 @@
       <p>&#169; Dale Shlass 2019, All Rights Reserved.</p>
     </div>
   </footer> <!--End of the footer-->
-    
-    <div id="scrollToTop" class="back-to-top"> <!--This is the scroll to top button that is fixed to the bottom right-->
-      <a href="#top"><i class="fas fa-angle-up"></i></a>
-    </div>
+  
+  <div id="scrollToTop" class="back-to-top"> <!--This is the scroll to top button that is fixed to the bottom right-->
+    <a href="#top"><i class="fas fa-angle-up"></i></a>
+  </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>

@@ -566,22 +566,137 @@ nav ul li:active a:before  {
 } //End of the service container code block
 
 
+/************************************ Section 4: Portfolio ********************************************/
+
+.center-wrapper-portfolio {
+  margin: 0;
+  padding: 5%;
+  background: white;
+}
+
+.portfolio-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+
+  h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-family: $rubikFont;
+    color: $salmon;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+    
+  }
+
+  h2 {
+    font-size: 3.8rem;
+    font-family:$rufinaFont;
+    line-height: 1;
+    letter-spacing: 2px;
+    position: relative;
+    margin-bottom: 10%;
+  }
+
+  h2::after {
+    position: absolute;
+    content: "";
+    height: 5px;
+    background: linear-gradient(to right, #ced6ff 0%, #ced6ff 60%, rgba(206, 214, 255, 0) 60%, rgba(206, 214, 255, 0) 80%, #ced6ff 80%, #ced6ff 100%);
+    bottom: -20px;
+    left: 40%;
+    right: 40%;
+  }
+
+  input {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+  }
+
+  label {
+    display: block;
+    line-height: 1;
+    font-size: 1.4rem;
+    padding: 5%;
+    margin: 0 auto;
+    width: 40%;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #929cad;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-family: $rubikFont;
+  }
+
+  ul {
+      margin: 5% 0; 
+      padding:0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow: hidden;
+  }
+
+  ul li {
+    list-style: none;
+    margin: 2%;
+    width: 60%; //controls the starting width
+    transition: width 1s
+  }
+}
+
+/*Select Categorie*/	
+input#project1:checked ~ .gallery li:not(.project1-item), 
+input#project2:checked ~ .gallery li:not(.project2-item), 
+input#project3:checked ~ .gallery li:not(.project3-item), 
+input#personal-project:checked ~ .gallery li:not(.personal-item) {
+  overflow: hidden;
+  width: 0;
+}
+
+input#project1:checked ~ .gallery li, 
+input#project2:checked ~ .gallery li, 
+input#project3:checked ~ .gallery li, 
+input#personal-project:checked ~ .gallery li {
+  width: 90%;
+}
+
+label[for="all"] {
+  border-bottom: 2px solid $salmon;
+}
+
+input#project1:checked ~ label[for="project1"],
+input#project2:checked ~ label[for="project2"],
+input#project3:checked ~ label[for="project3"], 
+input#personal-project:checked ~ label[for="personal-project"] {
+  border-bottom: 2px solid $salmon;
+}
+
+
 /************************************ Section 5: Resume ********************************************/
 
 .resume-wrapper { //Start of the resume wrapper code block
   width: 80%;
   margin: 0 auto;
   text-align: center;
+  background: #f3f5ff;
 
   h3 {
     margin: 0;
     padding: 20% 0 5% 0;
-      font-size: 1.8rem;
-      text-transform: uppercase;
-      font-family: $rubikFont;
-      color: $salmon;
-      font-weight: 500;
-      letter-spacing: 2px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-family: $rubikFont;
+    color: $salmon;
+    font-weight: 500;
+    letter-spacing: 2px;
   }
 
   label {
@@ -663,8 +778,8 @@ nav ul li:active a:before  {
     right: 0;
   }
 
-.no-animation::before,
-.no-animation::after {
+  .no-animation::before,
+  .no-animation::after {
     content: '';
     height: 2px;
     position: absolute;
@@ -692,53 +807,53 @@ label[for="resume"] {
 
 .left-right:before,
 .left-right:after {
-    content: '';
-    height: 2px;
-    position: absolute;
-    background: $salmon;
-    transition: all 0.3s;
-  }
+  content: '';
+  height: 2px;
+  position: absolute;
+  background: $salmon;
+  transition: all 0.3s;
+}
 
  .left-right:before { 
-    top:-2px;
-    right:0;
-    left:70%;
-  }
+  top:-2px;
+  right:0;
+  left:70%;
+}
 
-  .left-right:after {
-    bottom:-2px;
-    right:70%;
-    left:0;
-  }
+.left-right:after {
+  bottom:-2px;
+  right:70%;
+  left:0;
+}
 
-  .right-left:before,
-  .right-left:after {
-    content: '';
-    height: 2px;
-    position: absolute;
-    background: $salmon;
-    transition: all 0.3s;
-  }
+.right-left:before,
+.right-left:after {
+  content: '';
+  height: 2px;
+  position: absolute;
+  background: $salmon;
+  transition: all 0.3s;
+}
 
-  .right-left:before { 
-    top:-2px;
-    right:70%;
-    left:0;
-  }
+.right-left:before { 
+  top:-2px;
+  right:70%;
+  left:0;
+}
 
-  .right-left:after {
-    bottom:-2px;
-    right:0;
-    left:70%;
-  }
+.right-left:after {
+  bottom:-2px;
+  right:0;
+  left:70%;
+}
 
-  .right-left:hover::before,
-  .right-left:hover::after,
-  .left-right:hover::before,
-  .left-right:hover::after  {
-    left: 0;
-    right: 0;
-  }
+.right-left:hover::before,
+.right-left:hover::after,
+.left-right:hover::before,
+.left-right:hover::after  {
+  left: 0;
+  right: 0;
+}
 
 input[name='resume'] {
   position: absolute;
@@ -759,22 +874,22 @@ input[name='resume'] {
   display: none;
 }
 
-  .resume-logo {
-    padding-top: 15%;
-    margin: 0 auto;
-    max-width: 50px;
-  }
+.resume-logo {
+  padding-top: 15%;
+  margin: 0 auto;
+  max-width: 50px;
+}
 
-  .label-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
+.label-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 
 /************************************ Section 6: Contact ********************************************/
 
 .center-wrapper {
   margin: 0;
-  background: url(../assets/contact-bg.png), #f3f5ff;
+  background: url(../assets/contact-bg.png), #fff;
   padding: 5%;
 }
 
@@ -809,6 +924,7 @@ input[name='resume'] {
     right: 40%;
   }
 }
+
 .contact-flex {
   display: flex;
   flex-direction: column;
@@ -846,7 +962,7 @@ input[name='resume'] {
     position: absolute;
     top: -12px;
     left:24px;
-    background: #f3f5ff;
+    background: #fff;
   }
 
   .input-wrapper.message {
@@ -873,7 +989,6 @@ input[name='resume'] {
     border: 3px dashed $salmon;
     transition: all 0.3s;
   }
-
  }
  
  form button {
@@ -892,7 +1007,6 @@ input[name='resume'] {
   border-radius: 30px;
   letter-spacing: 2px;
 }
-
 
 
 /************************************ Section 7: Footer ********************************************/
@@ -1095,8 +1209,34 @@ footer {
     width: 60%;
   }
 
-   //Section 5: Resume
-   .resume-wrapper {
+    //Section 4: Portfolio
+  .portfolio-wrapper {
+
+    h2 {
+      margin-bottom: 10%;
+    }
+      
+    label {
+      display: inline;
+      padding: 2%;
+      margin: 2%;
+    }
+
+    ul {
+      width: 90%;
+      margin: 5% auto;
+    }
+
+    ul li {
+      margin: 2%;
+        width: 60%;
+      transition: width 1s;
+    }
+  }
+
+  //Section 5: Resume
+  .resume-wrapper {
+    
     label {
       padding: 3% 0;
     }
@@ -1113,24 +1253,24 @@ footer {
       margin-bottom: 10%;
     }
 
-  ul {
-    margin-top: 5%;
-    padding-bottom: 10%;
-  }
-
-  li {
-    margin: 5% 0;
-  }
-}
-
-      //Section 6: Contact
-      .contact-wrapper {
-        width: 60%;
-    
-        .input-wrapper {
-          margin: 3% 0;
-        }
+    ul {
+      margin-top: 5%;
+      padding-bottom: 10%;
     }
+
+    li {
+      margin: 5% 0;
+    }
+  }
+
+  //Section 6: Contact
+  .contact-wrapper {
+    width: 60%;
+
+    .input-wrapper {
+      margin: 3% 0;
+    }
+  }
 
   //Section 7: Footer
   footer {
@@ -1263,7 +1403,7 @@ footer {
     margin-left: 5%;
 
     .contact-flex {
-    
+
       ul {   
         li {
           width: 63%;
@@ -1289,6 +1429,28 @@ footer {
   .languages-wrapper {
     h4 {
       margin-bottom: 2%;
+    }
+  }
+
+  
+    //Section 4: Portfolio
+  .portfolio-wrapper {
+    h2 {
+      margin-bottom: 3%;
+    }
+     
+    label {
+      padding: 2%;
+      margin: 0 3%;
+    }
+
+    ul {
+      margin: 3% auto; 
+      width: 60%;
+    }
+
+    ul li {
+      width: 40%;
     }
   }
 
@@ -1342,20 +1504,21 @@ footer {
     }
   }
 
-.contact-flex {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+  .contact-flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
-form button {
-  margin: 2%;
-}
+  form button {
+    margin: 2%;
+  }
 
   //Section 7: Footer
   footer {
     padding-top: 8%;
   }
+  
   .blue-wrapper p {
     width: 70%;
   }
@@ -1438,7 +1601,7 @@ form button {
     }
   } //End of the about flex right code block
 
-    .languages {
+  .languages {
     width: 40%;
   }
 
@@ -1460,22 +1623,34 @@ form button {
     }
   }
 
-    //Section 5: Resume
-    .resume-wrapper {
-
-      ul {
-        margin-top: 2%;
-      }
-
-      li {
-        width: 30%;
-        margin: 2% 0;
-      }
-     
-        .label-wrapper {
-          width: 60%;
-        }
+      //Section 4: Portfolio
+  .portfolio-wrapper {
+    h2:after {
+      left: 45%;
+      right: 45%;
     }
+  
+    ul {
+      width: 50%;
+    }
+  }
+
+  //Section 5: Resume
+  .resume-wrapper {
+
+    ul {
+      margin-top: 2%;
+    }
+
+    li {
+      width: 30%;
+      margin: 2% 0;
+    }
+    
+    .label-wrapper {
+      width: 60%;
+    }
+  }
 
   //Section 6: Contact
   .contact-wrapper {
@@ -1490,7 +1665,7 @@ form button {
       width: 33%;
       margin: 3% 0;
     }
-}
+  }
 
   //Section 7: Footer
   footer {
