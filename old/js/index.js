@@ -83,7 +83,7 @@ function navShadow() {
 }
 
 function toTop() {
-  if (getYPosition() >= 300 ) {
+  if (getYPosition() > 300 ) {
     scrollToTop.className = "back-to-top back-to-top-show";
   } else scrollToTop.className = "back-to-top";
 };
