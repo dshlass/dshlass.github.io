@@ -10,6 +10,7 @@ hoverElements.forEach(element => element.addEventListener('mouseleave', hoverCol
 function menuToggler() {
   let menu = document.querySelector('.hide'); 
       menu.classList.toggle('show')
+      hoverElements[0].style.setProperty('background', ``);
 }
 
 
@@ -27,6 +28,7 @@ window.addEventListener("scroll", toTop);
 
 function hoverColorSet() {
     this.style.setProperty('background', `${colorRandom()}`);
+    
 }
 
 function hoverColorRemove() {
