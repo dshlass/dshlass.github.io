@@ -311,14 +311,8 @@ main {
   grid-gap: 10px;
 }
 
-/* .language {
-
- 
-} */
-
-.language i {
-  display: block;
- font-size: 8rem;
+svg {
+  width: 100%;
 }
 
 
