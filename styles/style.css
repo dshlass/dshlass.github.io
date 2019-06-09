@@ -44,7 +44,6 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
     border: 3px solid #33332d;
     font-weight: 600;
     
-header nav ul li a
 */
 
 :root {
@@ -55,8 +54,8 @@ header nav ul li a
 }
 
 html {
-  font-size: 62.5%;
   color: var(--main-color);
+  font-size: 62.5%;
 }
 
 h1 {
@@ -74,8 +73,8 @@ h1, h2, h3, h4, h5, h6, a {
 }
 
 h1, h2, h3, h4, h5, h6, a, p, ul, li {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 p {
@@ -89,14 +88,14 @@ li {
 }
 
 img {
+  display: block;
   width: 100%;
-display: block;
 }
 
 a {
-  padding: 10px 5px;
   color: var(--main-color);
   font-size: 1.5rem;
+  padding: 10px 5px;
   text-decoration: none;
 }
 
@@ -108,8 +107,6 @@ body, header, nav, main, .portfolio, .contact {
 body {
   grid-auto-rows: auto;
   grid-row-gap: 25px;
-  max-width: 100%;
-  overflow-x: hidden;
   position: relative;
 }
 
@@ -120,48 +117,48 @@ header {
 }
 
 nav {
+  background: rgba(255, 255, 255, .8);
   position: fixed;
   top: 0;
-  right: 0;
   left: 0;
-  background: rgba(255, 255, 255, .8);
+  right: 0;
   padding: 10px;
+  z-index: 10;
 }
 
 .logo-button { 
   grid-column: 1/2;
-  background: none;
-  padding: .5rem .5rem;
-  border: none;
   align-self: center;
   justify-self: center;
+  background: none;
+  border: none;
+  padding: .5rem .5rem;
 }
 
 nav ul {
   grid-column: 2/7;
   display: grid;
   grid-template-columns: repeat(4, 2fr);
+  align-self: center;
+  justify-self: center;
   position: absolute;
   left: 600px;
   opacity: 0;
-  list-style: none;
   transition:  all 0.5s;
-  align-self: center;
-  justify-self: center;
 }
 
 nav ul li {
-  text-align: center;
-  display: inline-block;
   border-bottom: 3px solid rgba(255, 255, 255, 0);
+  display: inline-block;
+  text-align: center;
 }
 
 ul li a {
-    display: block;
+  display: block;
 }
 
 nav ul li:hover{
- border-bottom: 3px dotted var(--main-color);
+  border-bottom: 3px dotted var(--main-color);
 }
 
 .show {
@@ -176,7 +173,7 @@ header h1, header h2, .social-wrapper {
 }
 
 header h1 {
-    align-self: end;
+  align-self: end;
 }
 
 header h2 {
@@ -199,21 +196,21 @@ header h2 {
 }
 
 .social li:first-child {
-    box-shadow: -3px 5px var(--main-color);
-    padding: .6rem 1rem;
-    border: 3px solid var(--main-color)
+  border: 3px solid var(--main-color);
+  box-shadow: -3px 5px var(--main-color);
+  padding: .6rem 1rem;
 }
 
 .social li {
-    box-shadow: 0px 5px var(--main-color);
-    padding: .6rem 1rem;
-    border: 3px solid var(--main-color)
+  border: 3px solid var(--main-color);
+  box-shadow: 0px 5px var(--main-color);
+  padding: .6rem 1rem;
 }
 
 .social li:last-child {
-    box-shadow: 3px 5px var(--main-color);
-    padding: .6rem 1rem;
-    border: 3px solid var(--main-color);
+  border: 3px solid var(--main-color);
+  box-shadow: 3px 5px var(--main-color);
+  padding: .6rem 1rem;
 }
 
 header i {
@@ -243,7 +240,6 @@ main {
   border: 20px solid rgb(225, 225, 225)
 }
 
-
 .about h2, .portfolio h2, .skills h2, .contact h2 {
   margin-bottom: 25px;
   position: relative;
@@ -259,10 +255,10 @@ main {
 .about h2::after, .portfolio h2::after, .skills h2::after, .contact h2::after {
   position: absolute;
   content: "";
+  top: 20px;
+  bottom: 0px;
   left: -100%;
   right: -50px;
-  bottom: 0px;
-  top: 20px;
   background: var(--main-color);
 }
 
@@ -274,14 +270,12 @@ main {
   bottom: 3px;
   top: 10px;
   background: linear-gradient(to top right, var(--main-color) 50%, transparent 50%); 
-
 }
 
 
 .portfolio h2, .contact h2 {
   display: inline-block;
 }
-
 
 .about, .portfolio, .skills, .contact {
   padding: 25px 0;
