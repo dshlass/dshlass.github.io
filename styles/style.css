@@ -223,7 +223,7 @@ header h2 {
   background: var(--main-color);
 } */
 
-i {
+header i {
   color: var(--main-color);
   font-size: 3rem;
   font-weight: 600;
@@ -311,9 +311,15 @@ main {
   grid-gap: 10px;
 }
 
-/* svg {
- background:  #FFF;
+/* .language {
+
+ 
 } */
+
+.language i {
+  display: block;
+ font-size: 8rem;
+}
 
 
 
