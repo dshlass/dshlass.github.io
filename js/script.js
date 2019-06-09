@@ -10,7 +10,7 @@ hoverElements.forEach(element => element.addEventListener('mouseleave', hoverCol
 function menuToggler() {
   let menu = document.querySelector('.hide'); 
       menu.classList.toggle('show')
-      if (hoverElements[0].style.background != ""&& menu.className === 'hide')
+      if (hoverElements[0].style.background != "" && menu.className === 'hide')
       hoverElements[0].style.setProperty('background', ``);
       else (hoverElements[0].style.setProperty('background', `${colorRandom()}`))
     } 
@@ -66,5 +66,15 @@ function focusOff() {
 
   target.style.setProperty('border' , `3px solid var(--main-color)`);
   label[0].style.setProperty('color' , `var(--main-color)`)
+}
+
+
+let mainDivs = document.querySelectorAll('.about, .portfolio, .contact, .skills')
+
+mainDivs.forEach(element => element.addEventListener('mouseenter', beforeAfterColor))
+
+function beforeAfterColor() {
+  let root = document.documentElement;
+  root.style.setProperty('--random', `${colorRandom()}`);
 }
 

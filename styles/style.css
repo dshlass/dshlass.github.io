@@ -51,6 +51,7 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
   --heading-font: 'IBM Plex Mono', 'monospace';
 
   --main-color:  rgb(51, 51, 45);
+
 }
 
 html {
@@ -99,9 +100,13 @@ a {
   text-decoration: none;
 }
 
-body, header, nav, main, .portfolio, .contact {
+body, header, nav, main, .about, .portfolio, .skills, .contact {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr 2fr 1fr 1fr;
+}
+
+.about, .portfolio, .skills, .contact {
+  grid-column: 1/7;
 }
 
 body {
@@ -167,18 +172,21 @@ nav ul li:hover{
   transition: all 0.5s;
 }
 
-header h1, header h2, .social-wrapper {
+header h1, header h2, .social-wrapper, .about-wrapper, .portfolio-wrapper, .skills-wrapper, .contact-wrapper  {
   grid-column: 2/6;
-  justify-self: center;
 }
 
 header h1 {
   align-self: end;
+  justify-self: center;
+
 }
 
 header h2 {
   align-self: start;
   position: relative;
+  justify-self: center;
+
 }
 
 .social-wrapper {
@@ -219,7 +227,7 @@ header i {
   font-weight: 600;
 }
 
-main, .portfolio, .contact {
+main, .portfolio, .contact, .about, .skills {
   grid-column: 1/7;
 }
 
@@ -231,10 +239,6 @@ main {
   background:  rgb(225, 225, 225);
 }
 
-.about, .skills, .contact h2, .contact p, .portfolio h2, .portfolio p {
-  grid-column: 2/6;
-}
-
 .img-container {
   margin-bottom: 50px;
   border: 20px solid rgb(225, 225, 225)
@@ -243,15 +247,9 @@ main {
 .about h2, .portfolio h2, .skills h2, .contact h2 {
   margin-bottom: 25px;
   position: relative;
-}
-
-.about h2, .skills h2 {
   display: inline-block;
 }
 
-.title-wrapper {
-  grid-column: 2/5;
-}
 .about h2::after, .portfolio h2::after, .skills h2::after, .contact h2::after {
   position: absolute;
   content: "";
@@ -260,25 +258,35 @@ main {
   left: -100%;
   right: -50px;
   background: var(--main-color);
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
 .about h2::before, .portfolio h2::before, .skills h2::before, .contact h2::before{
   position: absolute;
   content: "";
-  left: 115%;
+  width: 20px; 
+  height: 20px;
   right: -50px;
-  bottom: 3px;
-  top: 10px;
-  background: linear-gradient(to top right, var(--main-color) 50%, transparent 50%); 
-}
-
-
-.portfolio h2, .contact h2 {
-  display: inline-block;
+  top:11px; 
+  background: var(--main-color); 
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+  z-index: 5;
 }
 
 .about, .portfolio, .skills, .contact {
   padding: 25px 0;
+}
+
+.about:hover h2::before,
+.about:hover h2::after,
+.portfolio:hover h2::before,
+.portfolio:hover h2::after,
+.skills:hover h2::before,
+.skills:hover h2::after,
+.contact:hover h2::before,
+.contact:hover h2::after {
+  background: var(--random);
 }
 
 .toTop {
