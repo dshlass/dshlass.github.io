@@ -30,7 +30,6 @@ window.addEventListener("scroll", toTop);
 
 function hoverColorSet() {
     this.style.setProperty('background', `${colorRandom()}`);
-    
 }
 
 function hoverColorRemove() {
@@ -38,7 +37,34 @@ function hoverColorRemove() {
 }
 
 function colorRandom() {
-  let randomNumber = Math.floor(Math.random()*9);
   let hoverColors = ['#AEFFDA','#82D2F7','#B795F3','#E693CB','#F7F382','#EEAC5D','#EB8755','#706BE4','#AEFFDA'];
+
+  let randomNumber = Math.floor(Math.random()*9);
+  
   return hoverColors[randomNumber];  
 }
+
+let formElement = document.querySelectorAll('input, textarea');
+
+formElement.forEach(element => element.addEventListener('focus', focusOn));
+formElement.forEach(element => element.addEventListener('blur', focusOff));
+
+
+function focusOn() {
+  let target = this.parentNode;
+  let label = this.labels;
+
+  let newColor = colorRandom();
+
+  target.style.setProperty('border' , `3px dashed ${newColor}`)
+  label[0].style.setProperty('color' , `${newColor}`)
+}
+
+function focusOff() {
+  let target = this.parentNode;
+  let label = this.labels;
+
+  target.style.setProperty('border' , `3px solid var(--main-color)`);
+  label[0].style.setProperty('color' , `var(--main-color)`)
+}
+
