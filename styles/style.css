@@ -340,10 +340,12 @@ main {
   bottom: 20px;
   right: 20px;
   display: none;
+  padding: 0;
 }
 
 .toTop i {
   font-size: 3rem;
+  padding: 10px;
 }
 
 .top-hover:hover {
@@ -351,7 +353,7 @@ main {
 }
 
 .show-scroll {
-  display: block;
+  display: inline-block;
 }
 
 .language-wrapper {
