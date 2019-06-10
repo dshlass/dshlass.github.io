@@ -69,9 +69,9 @@ function focusOff() {
 }
 
 
-let mainDivs = document.querySelectorAll('.about, .portfolio, .contact, .skills')
+let mainHoverItems = document.querySelectorAll('.about, .portfolio, .contact, .skills, .top-hover')
 
-mainDivs.forEach(element => element.addEventListener('mouseenter', beforeAfterColor))
+mainHoverItems.forEach(element => element.addEventListener('mouseenter', beforeAfterColor))
 
 function beforeAfterColor() {
   let root = document.documentElement;

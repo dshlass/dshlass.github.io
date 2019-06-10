@@ -346,6 +346,10 @@ main {
   font-size: 3rem;
 }
 
+.top-hover:hover {
+  color: var(--random);
+}
+
 .show-scroll {
   display: block;
 }
