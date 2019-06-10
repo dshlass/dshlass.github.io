@@ -43,9 +43,12 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
   font-weight: 600;
 */
 
+/*GENERAL SETTINGS*/
+
 html {
   color: var(--main-color);
   font-size: 62.5%;
+  font-display: block;
 }
 
 h1 {
@@ -88,6 +91,36 @@ a {
   padding: 10px 5px;
   text-decoration: none;
 }
+
+svg {
+  width: 100%;
+}
+
+label {
+  position: absolute;
+  top:-12px;
+  left: 10px;
+  font-size: 1.4rem;
+  font-family: var(--main-font);
+  color: var(--main-color);
+  background: rgb(225, 225, 225);
+}
+
+input, 
+textarea {
+  padding: 15px;
+  border: none;
+  outline: 0;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+input {
+  text-transform: uppercase;
+}
+
+
+/*ELEMENT SPECIFIC SETTINGS*/
 
 body, header, nav, main, .about, .portfolio, .skills, .contact {
   display: grid;
@@ -161,7 +194,13 @@ nav ul li:hover{
   transition: all 0.5s;
 }
 
-header h1, header h2, .social-wrapper, .about-wrapper, .portfolio-wrapper, .skills-wrapper, .contact-wrapper  {
+header h1, 
+header h2, 
+.social-wrapper, 
+.about-wrapper, 
+.portfolio-wrapper, 
+.skills-wrapper, 
+.contact-wrapper  {
   grid-column: 2/6;
 }
 
@@ -216,7 +255,11 @@ header i {
   font-weight: 600;
 }
 
-main, .portfolio, .contact, .about, .skills {
+main, 
+.portfolio, 
+.contact, 
+.about, 
+.skills {
   grid-column: 1/7;
 }
 
@@ -224,7 +267,8 @@ main {
   grid-row-gap: 25px;
 }
 
-.portfolio, .contact {
+.portfolio, 
+.contact {
   background:  rgb(225, 225, 225);
 }
 
@@ -233,24 +277,19 @@ main {
   border: 20px solid rgb(225, 225, 225)
 }
 
-.about h2, .portfolio h2, .skills h2, .contact h2 {
+.about h2, 
+.portfolio h2, 
+.skills h2, 
+.contact h2 {
   margin-bottom: 25px;
   position: relative;
   display: inline-block;
 }
 
-.about h2::after, .portfolio h2::after, .skills h2::after, .contact h2::after {
-  position: absolute;
-  content: "";
-  top: 20px;
-  bottom: 0px;
-  left: -100%;
-  right: -50px;
-  background: var(--main-color);
-  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-}
-
-.about h2::before, .portfolio h2::before, .skills h2::before, .contact h2::before{
+.about h2::before, 
+.portfolio h2::before, 
+.skills h2::before, 
+.contact h2::before{
   position: absolute;
   content: "";
   width: 20px; 
@@ -263,7 +302,25 @@ main {
   z-index: 5;
 }
 
-.about, .portfolio, .skills, .contact {
+.about h2::after, 
+.portfolio h2::after, 
+.skills h2::after, 
+.contact h2::after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  bottom: 0px;
+  left: -100%;
+  right: -50px;
+  background: var(--main-color);
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+.about, 
+.portfolio, 
+.skills, 
+.contact {
   padding: 25px 0;
 }
 
@@ -299,10 +356,6 @@ main {
   grid-gap: 10px;
 }
 
-svg {
-  width: 100%;
-}
-
 .form-wrapper {
   grid-column: 2/6;
   display: grid;
@@ -317,28 +370,6 @@ svg {
   border: 3px solid var(--main-color);
   padding: 10px;
   position: relative;
-}
-
-label {
-  position: absolute;
-  top:-12px;
-  left: 10px;
-  font-size: 1.4rem;
-  font-family: var(--main-font);
-  color: var(--main-color);
-  background: rgb(225, 225, 225);
-}
-
-input, textarea {
-  padding: 15px;
-  border: none;
-  outline: 0;
-  font-size: 1.3rem;
-  line-height: 1.5rem;
-}
-
-input {
-  text-transform: uppercase;
 }
 
 .submit-button {
