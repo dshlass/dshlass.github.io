@@ -77,4 +77,3 @@ function beforeAfterColor() {
   let root = document.documentElement;
   root.style.setProperty('--random', `${colorRandom()}`);
 }
-
