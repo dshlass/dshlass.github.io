@@ -14,45 +14,34 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 }
 
 /*
+  font-family: 'IBM Plex Mono', monospace;
+  mono 500, 600, 700    h1 700, h2 700, a 500
 
-    font-family: 'IBM Plex Mono', monospace;
-    mono 500, 600, 700    h1 700, h2 700, a 500
+  font-family: 'IBM Plex Sans', sans-serif;
+  sans 500            regular text font
 
-    font-family: 'IBM Plex Sans', sans-serif;
-    sans 500            regular text font
+  Colors: 
+  rgb(51, 51, 45) or #33332D      Text
+  rgba(0, 0, 0, .8) or #000       Mono Images
+  rgb(225, 225, 225) or #E1E1E1   Backgrounds and Page Separations
+  rgb(255, 255, 255) or #FFF      Backgrounds for Mono Images and Pages
 
+  rgb(174, 255, 218) or #AEFFDA   Hover Color
+  rgb(130, 210, 247) or #82D2F7   Hover Color
+  rgb(183, 149, 243) or #B795F3   Hover Color
+  rgb(230, 147, 203) or #E693CB   Hover Color
+  rgb(247, 243, 130) or #F7F382   Hover Color
+  rgb(238, 172, 93)  or #EEAC5D   Hover Color
+  rgb(235, 135, 85)  or #EB8755   Hover Color
+  rgb(112, 107, 228) or #706BE4   Hover Color
+  rgb(174, 255, 218) or #AEFFDA   Hover Color
 
-    Colors: 
-    rgb(51, 51, 45) or #33332D      Text
-    rgba(0, 0, 0, .8) or #000       Mono Images
-    rgb(225, 225, 225) or #E1E1E1   Backgrounds and Page Separations
-    rgb(255, 255, 255) or #FFF      Backgrounds for Mono Images and Pages
-
-    rgb(174, 255, 218) or #AEFFDA   Hover Color
-    rgb(130, 210, 247) or #82D2F7   Hover Color
-    rgb(183, 149, 243) or #B795F3   Hover Color
-    rgb(230, 147, 203) or #E693CB   Hover Color
-    rgb(247, 243, 130) or #F7F382   Hover Color
-    rgb(238, 172, 93)  or #EEAC5D   Hover Color
-    rgb(235, 135, 85)  or #EB8755   Hover Color
-    rgb(112, 107, 228) or #706BE4   Hover Color
-    rgb(174, 255, 218) or #AEFFDA   Hover Color
-
-    Box Shadow
-    box-shadow: -3px 5px #33332d;
-    padding: .6rem 1rem;
-    border: 3px solid #33332d;
-    font-weight: 600;
-    
+  Box Shadow
+  box-shadow: -3px 5px #33332d;
+  padding: .6rem 1rem;
+  border: 3px solid #33332d;
+  font-weight: 600;
 */
-
-:root {
-  --main-font: 'IBM Plex Sans', 'sans-serif';
-  --heading-font: 'IBM Plex Mono', 'monospace';
-
-  --main-color:  rgb(51, 51, 45);
-
-}
 
 html {
   color: var(--main-color);
@@ -353,9 +342,9 @@ input {
 }
 
 .submit-button {
-    box-shadow: 0px 5px var(--main-color);
-    padding: .6rem 1rem;
-    border: 3px solid var(--main-color)
+  box-shadow: 0px 5px var(--main-color);
+  padding: .6rem 1rem;
+  border: 3px solid var(--main-color)
 }
 
 
