@@ -119,6 +119,10 @@ input {
   text-transform: uppercase;
 }
 
+a:focus {
+  border: 1px solid blue;
+}
+
 
 /*ELEMENT SPECIFIC SETTINGS*/
 
@@ -184,7 +188,8 @@ ul li a {
   display: block;
 }
 
-nav ul li:hover{
+nav ul li:hover, 
+nav ul li:focus {
   border-bottom: 3px dotted var(--main-color);
 }
 
@@ -331,7 +336,15 @@ main {
 .skills:hover h2::before,
 .skills:hover h2::after,
 .contact:hover h2::before,
-.contact:hover h2::after {
+.contact:hover h2::after,
+.about:focus h2::before,
+.about:focus h2::after,
+.portfolio:focus h2::before,
+.portfolio:focus h2::after,
+.skills:focus h2::before,
+.skills:focus h2::after,
+.contact:focus h2::before,
+.contact:focus h2::after {
   background: var(--random);
 }
 
@@ -348,7 +361,8 @@ main {
   padding: 10px;
 }
 
-.top-hover:hover {
+.top-hover:hover,
+.top-hover:focus {
   color: var(--random);
 }
 
