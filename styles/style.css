@@ -61,6 +61,11 @@ h2 {
   font-weight: 600;
 }
 
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 h1, h2, h3, h4, h5, h6, a {
   font-family: var(--heading-font);
 }
@@ -205,21 +210,20 @@ header h2,
 .about-wrapper, 
 .portfolio-wrapper, 
 .skills-wrapper, 
-.contact-wrapper  {
+.contact-wrapper,
+.project  {
   grid-column: 2/6;
 }
 
 header h1 {
   align-self: end;
   justify-self: center;
-
 }
 
 header h2 {
   align-self: start;
   position: relative;
   justify-self: center;
-
 }
 
 .social-wrapper {
@@ -374,6 +378,7 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
+  margin-top: 15px;
 }
 
 .form-wrapper {
@@ -398,6 +403,22 @@ main {
   border: 3px solid var(--main-color)
 }
 
+.project:first-of-type {
+  padding-bottom: 25px;
+}
+
+.project-img {
+  margin: 10px 0 15px 0;
+  filter: saturate(0);
+}
+
+.project-img:hover {
+  filter: saturate(1);
+}
+
+.project-description p:first-child {
+  margin-bottom: 15px;
+}
 
 /*
 MEDIA QUERIES
