@@ -1,8 +1,8 @@
 //Randomly selects a color from an array.
 function colorRandom() {
-  let hoverColors = ['#AEFFDA','#82D2F7','#B795F3','#E693CB','#F7F382','#EEAC5D','#EB8755','#706BE4','#AEFFDA'];
+  let hoverColors = ['#6FD251','#82D2F7','#B795F3','#E693CB','#E64053','#EEAC5D','#EB8755','#706BE4'];
 
-  let randomNumber = Math.floor(Math.random()*9);
+  let randomNumber = Math.floor(Math.random()*8);
   
   return hoverColors[randomNumber];  
 }

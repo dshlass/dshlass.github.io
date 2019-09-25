@@ -13,36 +13,6 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
   --main-color:  rgb(51, 51, 45);
 }
 
-/*
-  font-family: 'IBM Plex Mono', monospace;
-  mono 500, 600, 700    h1 700, h2 700, a 500
-
-  font-family: 'IBM Plex Sans', sans-serif;
-  sans 500            regular text font
-
-  Colors: 
-  rgb(51, 51, 45) or #33332D      Text
-  rgba(0, 0, 0, .8) or #000       Mono Images
-  rgb(225, 225, 225) or #E1E1E1   Backgrounds and Page Separations
-  rgb(255, 255, 255) or #FFF      Backgrounds for Mono Images and Pages
-
-  rgb(174, 255, 218) or #AEFFDA   Hover Color
-  rgb(130, 210, 247) or #82D2F7   Hover Color
-  rgb(183, 149, 243) or #B795F3   Hover Color
-  rgb(230, 147, 203) or #E693CB   Hover Color
-  rgb(247, 243, 130) or #F7F382   Hover Color
-  rgb(238, 172, 93)  or #EEAC5D   Hover Color
-  rgb(235, 135, 85)  or #EB8755   Hover Color
-  rgb(112, 107, 228) or #706BE4   Hover Color
-  rgb(174, 255, 218) or #AEFFDA   Hover Color
-
-  Box Shadow
-  box-shadow: -3px 5px #33332d;
-  padding: .6rem 1rem;
-  border: 3px solid #33332d;
-  font-weight: 600;
-*/
-
 /*GENERAL SETTINGS*/
 
 html {
@@ -128,6 +98,14 @@ input {
 
 a:focus {
   border: 1px solid var(--main-color);
+}
+
+button {
+  cursor: pointer;
+}
+
+.margin {
+  margin: 0;
 }
 
 
@@ -244,24 +222,22 @@ header p {
 
 .social li {
   margin: 10px;
+  border: 3px solid var(--main-color);
+  box-shadow: 0px 5px var(--main-color);
 }
 
 .social li:first-child {
-  border: 3px solid var(--main-color);
   box-shadow: -3px 5px var(--main-color);
-  padding: .6rem 1rem;
-}
-
-.social li {
-  border: 3px solid var(--main-color);
-  box-shadow: 0px 5px var(--main-color);
-  padding: .6rem 1rem;
 }
 
 .social li:last-child {
   border: 3px solid var(--main-color);
   box-shadow: 3px 5px var(--main-color);
-  padding: .6rem 1rem;
+}
+
+.social-icons {
+  height: 100%;
+  padding: 16px 15px;
 }
 
 header i {
@@ -311,7 +287,7 @@ main {
   width: 20px; 
   height: 20px;
   right: -50px;
-  top:11px; 
+  top:17px; 
   background: var(--main-color); 
   border-radius: 50%;
   box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
@@ -325,8 +301,8 @@ main {
 .contact h2::after {
   position: absolute;
   content: "";
-  top: 20px;
-  bottom: 0px;
+  top: 25px;
+  bottom: -5px;
   left: -100%;
   right: -50px;
   background: var(--main-color);
@@ -426,8 +402,16 @@ main {
   filter: saturate(1);
 }
 
-.project-description p:first-child {
+.project-description ul {
+  padding-left: 30px;
   margin-bottom: 15px;
+}
+
+.project-description li {
+  list-style: disc;
+  font-family: var(--main-font);
+  font-size: 1.4rem;
+  line-height: 1.4;
 }
 
 /* Media Queries */
@@ -610,7 +594,6 @@ main {
   }
 
 }
-
 
 
 
