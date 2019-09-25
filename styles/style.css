@@ -18,7 +18,6 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 html {
   color: var(--main-color);
   font-size: 62.5%;
-  font-display: block;
 }
 
 h1, h2, h3, h4, h5, h6, a, p, ul, li {
@@ -105,7 +104,11 @@ button {
 }
 
 .margin {
-  margin: 0;
+  margin-bottom: 0;
+}
+
+.bold {
+  font-weight: 600;
 }
 
 
@@ -265,7 +268,7 @@ main {
 
 .img-container {
   margin-bottom: 50px;
-  border: 20px solid rgb(225, 225, 225)
+  border: 20px solid rgb(225, 225, 225);
 }
 
 .about h2, 
@@ -412,6 +415,10 @@ main {
   font-family: var(--main-font);
   font-size: 1.4rem;
   line-height: 1.4;
+}
+
+.project-description a, .project-img a {
+  padding: 0;
 }
 
 /* Media Queries */
@@ -564,7 +571,7 @@ main {
 @media (min-width: 1000px) {
 
   .img-container, .project-img {
-    width: 80%;
+    width: 60%;
   }
 
   .about h2::before, 
