@@ -18,6 +18,11 @@ function menuToggler() {
       if (hoverElements[0].style.background != "" && menu.className === 'hide')
       hoverElements[0].style.setProperty('background', ``);
       else (hoverElements[0].style.setProperty('background', `${colorRandom()}`))
+
+      if (window.innerWidth > 819 ) {
+        let body = document.querySelector('#body')
+        window.scrollTo(0, body.scrollTop)
+      }
     } 
 
 //Targetting all elements with the class hover
