@@ -392,8 +392,10 @@ main {
   border: 3px solid var(--main-color)
 }
 
-.project:last-of-type {
+.project:not(:first-of-type) {
   padding-top: 25px;
+  border-top: 1px solid var(--main-color);
+
 }
 
 .project-img {
@@ -508,10 +510,6 @@ main {
 
   .submit-button {
     grid-column: 3/6;
-  }
-
-  .project:last-child {
-    border-top: 1px solid var(--main-color);
   }
 
   .project-img.left {
